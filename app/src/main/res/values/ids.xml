@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editMessage" type="id" />
+    <item name="btnSend" type="id" />
+    <item name="btnProfile" type="id" />
+    <item name="btnSettings" type="id" />
+    <item name="topBar" type="id" />
+    <item name="logo" type="id" />
+    <item name="appName" type="id" />
+    <item name="chatScroll" type="id" />
+    <item name="messageInputLayout" type="id" />
+    <item name="chatContainer" type="id" />
+    <item name="exampleBotMessage" type="id" />
+    <item name="exampleUserMessage" type="id" />
+</resources>

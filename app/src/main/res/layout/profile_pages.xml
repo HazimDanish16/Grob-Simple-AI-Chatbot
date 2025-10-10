@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#FAFAFA">
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/profile_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Profile picture"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"
+        android:text="Username"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/profilePic"
+        android:layout_alignTop="@id/profilePic"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:textColor="#000000"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter email"
+        android:text="username@example.com"
+        android:layout_below="@id/etName"
+        android:layout_alignStart="@id/etName"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:textColor="#444444"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter bio"
+        android:text="Hello World"
+        android:layout_below="@id/etEmail"
+        android:layout_alignStart="@id/etEmail"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:textColor="#555555"
+        android:inputType="textMultiLine"
+        android:maxLines="3" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/etBio"
+        android:layout_alignStart="@id/etBio"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:padding="8dp" />
+
+</RelativeLayout>

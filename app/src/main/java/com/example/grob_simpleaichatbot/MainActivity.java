@@ -1,24 +1,47 @@
 package com.example.grob_simpleaichatbot;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText editMessage;
+    private ImageView btnSend;
+    private ImageView btnProfile;
+    private ImageView btnSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+
+        editMessage = findViewById(R.id.editMessage);
+        btnSend = findViewById(R.id.btnSend);
+        btnProfile = findViewById(R.id.btnProfile);
+        btnSettings = findViewById(R.id.btnSettings);
+
+        btnSend.setOnClickListener(v -> {
+            String message = editMessage.getText().toString().trim();
+            if (message.isEmpty()) {
+                Toast.makeText(this, "Please type a message first!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Message sent: " + message, Toast.LENGTH_SHORT).show();
+                editMessage.setText(""); // clear input
+            }
         });
+
+
+        btnProfile.setOnClickListener(v ->
+                Toast.makeText(this, "Profile screen will open here", Toast.LENGTH_SHORT).show()
+        );
+
+        btnSettings.setOnClickListener(v ->
+                Toast.makeText(this, "Settings screen will open here", Toast.LENGTH_SHORT).show()
+        );
     }
 }
