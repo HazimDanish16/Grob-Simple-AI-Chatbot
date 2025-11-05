@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Grob - Simple AI Chatbot</string>
+    <string name="hint_message">Ask me anything…</string>
+    <string name="action_send">Send</string>
+    <string name="message_api_key_missing">OpenRouter API key is not configured. Set OPENROUTER_API_KEY before building the app.</string>
+    <string name="message_error_generic">Something went wrong. Please try again.</string>
+    <string name="message_empty_response">I couldn&apos;t generate a response right now.</string>
+    <string name="message_thinking">Thinking…</string>
 </resources>
